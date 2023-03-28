@@ -22,15 +22,15 @@ def print_nametag(format_string, person):
     print(format_string.format(person=person))
 
 
-def fetch_website(urllib_version, url):
+def fetch_website(urllib_version):
     # Import the requested version (2 or 3) of urllib
-    exec(f"import urllib{urllib_version} as urllib", globals())
+    if (urlib_version == 2 or urlib_version == 3):
+        exec(f"import urllib{urllib_version} as urllib", globals())
     # Fetch and print the requested URL
-
-    try:
-        http = urllib.PoolManager()
-    except:
-        print('Exception')
+        try:
+            urllib.PoolManager()
+        except:
+            print('Exception')
 
 
 def load_yaml(filename):
