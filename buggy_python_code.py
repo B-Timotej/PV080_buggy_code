@@ -1,7 +1,8 @@
 import sys 
 import os
-import yaml
 import flask
+import yaml
+
 
 app = flask.Flask(__name__)
 
@@ -53,7 +54,7 @@ if __name__ == '__main__':
     print("2. Code injection vulnerability: use string=;print('Own code executed') #")
     print("3. Yaml deserialization vulnerability: use string=file.yaml")
     print("4. Use of assert statements vulnerability: run program with -O argument")
-    choice  = raw_input("Select vulnerability: ")
+    choice  = input("Select vulnerability: ")
     if choice == "1":
         new_person = Person("Vickie")
         print_nametag(input("Please format your nametag: "), new_person)
